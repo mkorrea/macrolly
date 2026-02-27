@@ -1,1 +1,52 @@
 @import "tailwindcss";
+
+@keyframes release-button-click-bounce {
+  0% { transform: scale(.95); }
+  50% { transform: scale(1.035); }
+  100% { transform: scale(1); }
+}
+
+@theme {
+  --color-*: initial;
+
+  --color-primary: #F86060;
+  --color-accent: #FC8468;
+  --color-secondary: #FFA770;
+
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  --color-title: #272221;
+  --color-subtitle: #403937;
+  --color-text: #574F4D;
+  --color-description: #8C8C8C;
+  --color-navbar-menu: #B0B0B0;
+
+  --color-bg: #FFFDFA;
+
+  --color-danger: #ec6b6a;
+
+
+  --animate-click: release-button-click-bounce 400ms ease;
+
+    
+  
+  --shadow-navbar-menu: 0px 4px 12px rgba(90, 90, 90, .12);
+  --shadow-card: 0px 4px 12px rgba(70, 70, 70, .40);
+  --drop-shadow-logo: 0px 0px 2px rgba(0, 0, 0, .2);
+  --color-shadow-smooth: #B0B0B01A;
+  
+  
+  
+  --font-logo: "Bricolage Grotesque", sans-serif;
+  --font-default: "DM Sans", "sans-serif";
+
+  --breakpoint-3xl: 120rem;
+
+  
+
+  --ease-fluid: cubic-bezier(0.3, 0, 0, 1);
+  --ease-snappy: cubic-bezier(0.2, 0, 0, 1);
+  /* ... */
+}
+
