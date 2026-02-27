@@ -7,7 +7,7 @@ import { SignOutIcon, UserIcon } from "@phosphor-icons/react";
 
 export function Sidebar() {
   return (
-    <div className="w-17.5 hidden pr-1 my-5 gap-y-10 md:flex flex-col transition-all md:hover:w-68">
+    <div className="w-17.5 hidden pr-1 my-5 gap-y-10 md:flex flex-col transition-all duration-200 ease- md:hover:w-68">
       <div className="flex items-center gap-x-6 ml-3.5">
         <img src={Logo} width={40} />
 
@@ -51,7 +51,7 @@ export function Sidebar() {
           })}
           
           <button  
-            className='relative rounded-lg flex items-center px-5 py-3 gap-x-6 font-semibold overflow-hidden transition-all duration-200 hover:text-primary text-navbar-menu active:scale-95 cursor-pointer'
+            className='relative rounded-lg flex items-center px-5 py-3 gap-x-6 font-semibold overflow-hidden transition-all duration-200 hover:text-danger text-navbar-menu active:scale-95 cursor-pointer'
           >
             <SignOutIcon 
               weight="fill" 

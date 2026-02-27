@@ -3,7 +3,7 @@ import UserIcon from '../assets/user-icon.svg'
 
 export function Header() {
   return (
-    <header className="sticky z-20 flex items-center justify-center w-full h-20 backdrop-blur-2xl rounded-t-2xl overflow-hidden shadow shadow-shadow-smooth">
+    <header className="sticky z-20 flex items-center justify-center w-full min-h-20 backdrop-blur-2xl rounded-t-2xl overflow-hidden shadow shadow-shadow-smooth lg:min-h-25">
       <div className="mx-auto flex justify-center items-center w-full max-w-350 px-4 md:justify-between">
         <div className="p-2 w-fit rounded-lg absolute left-3 cursor-pointer md:hidden">
           <ListIcon size={24} />
