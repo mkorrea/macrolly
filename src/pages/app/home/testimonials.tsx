@@ -1,5 +1,8 @@
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 import { Marquee } from "@/components/ui/marquee"
 import { StarIcon } from "@phosphor-icons/react"
+import { useRef } from "react"
+import Autoplay from "embla-carousel-autoplay"
 
 const reviews = [
   {
@@ -75,7 +78,7 @@ const ReviewCard = ({
   name: string
 }) => {
   return (
-    <figure className="shadow-card rounded-xl px-4 py-6 flex flex-col gap-y-5 max-w-120 md:px-10">
+    <figure className="shadow-card rounded-xl px-4 py-6 flex flex-col gap-y-4 w-full h-full max-w-full md:max-w-120 md:px-10">
       <div className="flex gap-x-1">
         <StarIcon weight="fill" className="text-secondary" size={12} />
         <StarIcon weight="fill" className="text-secondary" size={12} />
@@ -83,7 +86,7 @@ const ReviewCard = ({
         <StarIcon weight="fill" className="text-secondary" size={12} />
         <StarIcon weight="fill" className="text-secondary" size={12} />
       </div>
-      <div className="flex flex-col justify-between h-full ">
+      <div className="flex flex-col justify-between h-full gap-y-2">
         <p className="text-sm text-text text-justify">
           {body}
         </p>
@@ -96,11 +99,13 @@ const ReviewCard = ({
 }
 
 export function Testimonials() {
-
+  const plugin = useRef(
+    Autoplay({ delay: 5000, stopOnInteraction: true })
+  )
   
   return (
-    <section className="px-2 py-12 space-y-10">
-      <div className="flex flex-col items-center gap-y-3">
+    <section className="py-12 space-y-10 w-full">
+      <div className="flex flex-col items-center gap-y-3 px-2">
         <h1 className="text-subtitle font-semibold text-center text-2xl md:text-3xl xl:text-4xl">
           Feito para você. Testado e aprovado 
         </h1>
@@ -110,8 +115,26 @@ export function Testimonials() {
       </div>
 
 
-      <div className="flex md:hidden">
-
+      <div className="flex maw-w-full md:hidden">
+        <Carousel  
+          plugins={[plugin.current]}
+          className="w-full"
+          onMouseEnter={plugin.current.stop}
+          onMouseLeave={plugin.current.reset}
+        >
+          <CarouselContent className="flex w-full ml-0 p-2">
+            
+            {reviews.map((review, index) => {
+              return (
+                <CarouselItem key={index} className="max-w-fit w-full px-0">
+                  <div className="p-1 max-w-full h-full">
+                    <ReviewCard name={review.name} body={review.body} />
+                  </div>
+                </CarouselItem>
+              )
+            })}
+          </CarouselContent>
+        </Carousel>
       </div>
 
       <div className="flex-col gap-y-4 hidden md:flex">
