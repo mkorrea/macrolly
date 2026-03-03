@@ -1,5 +1,12 @@
+import { PageHead } from "@/components/page-head";
+
 export function Ingredients() {
   return (
-    <h1>Ingredients</h1>
+    <>
+      <PageHead title="Ingredientes" />
+      
+    
+      <h1>Ingredients</h1>
+    </>
   )
 }

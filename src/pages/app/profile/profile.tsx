@@ -1,5 +1,12 @@
+import { PageHead } from "@/components/page-head";
+
 export function Profile() {
   return (
-    <h1>Profile</h1>
+    <>
+      <PageHead title="Minha Conta" />
+      
+    
+      <h1>profile</h1>
+    </>
   )
 }
