@@ -7,7 +7,7 @@ export function HeroSection() {
     <>
       <img
         src={HeroBg}
-        className="h-165 w-full object-cover object-bottom rounded-t-2xl -mt-20 lg:-mt-25
+        className="h-165 w-full object-cover object-bottom rounded-t-2xl -mt-16 lg:-mt-20
         sm:h-223
         xl:h-260"
       />
@@ -18,7 +18,7 @@ export function HeroSection() {
           <p className="text-xs sm:text-xl text-text">
             Assistente fitness de nutrição
           </p>
-          <h1 className="min-w-fit font-bold text-2xl md:text-4xl lg:text-5xl xl:text-6xl text-title">
+          <h1 className="min-w-fit font-bold text-3xl md:text-4xl lg:text-5xl xl:text-6xl text-title">
             Controle Seus Macros. <br />
             Simplifique Suas Receitas.
           </h1>

@@ -1,5 +1,12 @@
+import { PageHead } from "@/components/page-head";
+
 export function Recipes() {
   return (
-    <h1>Receitas</h1>
+    <>
+      <PageHead title="Receitas" />
+      
+    
+      <h1>Receitas</h1>
+    </>
   )
 }

@@ -11,7 +11,7 @@ export function SidebarItem({ label, path, icon: Icon }: SidebarItemProps) {
   return (
     <NavLink 
       to={path} 
-      className={({ isActive }) => clsx('relative rounded-lg flex items-center px-5 py-3 gap-x-6 font-semibold  overflow-hidden transition-all duration-200', 
+      className={({ isActive }) => clsx('relative rounded-lg flex items-center px-4 py-3 gap-x-6 font-semibold  overflow-hidden transition-all duration-200', 
         isActive 
         ? "bg-white shadow-navbar-menu text-accent hover:brightness-105"
         : "text-navbar-menu hover:text-text active:scale-95"
@@ -31,7 +31,7 @@ export function SidebarItem({ label, path, icon: Icon }: SidebarItemProps) {
             )}
           />
 
-          <span className="text-nowrap">{label}</span>
+          <span className="text-nowrap text-clip overflow-x-hidden w-full">{label}</span>
         </>
       )}
     </NavLink>
