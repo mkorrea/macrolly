@@ -17,12 +17,17 @@ export const sidebarItems = {
       path: "/ingredients",
       icon: BreadIcon
     },
-  ],
-  account: [
     {
       label: "Meu Perfil",
       path: "/profile",
       icon: UserIcon
     },
-  ]
+  ],
+  // account: [
+  //   {
+  //     label: "Meu Perfil",
+  //     path: "/profile",
+  //     icon: UserIcon
+  //   },
+  // ]
 }
