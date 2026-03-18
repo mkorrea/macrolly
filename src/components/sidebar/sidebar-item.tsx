@@ -11,25 +11,28 @@ export function SidebarItem({ label, path, icon: Icon }: SidebarItemProps) {
   return (
     <NavLink 
       to={path} 
-      className={({ isActive }) => clsx('relative rounded-lg flex items-center px-4 py-3 gap-x-6 font-semibold  overflow-hidden transition-all duration-200', 
+      className={({ isActive }) => clsx('relative rounded-lg flex items-center py-3 gap-x-2 font-semibold  overflow-hidden transition-all duration-200', 
         isActive 
         ? "bg-white shadow-navbar-menu text-accent hover:brightness-105"
-        : "text-navbar-menu hover:text-text active:scale-95"
+        : "text-navbar-menu hover:text-text active:scale-97"
       )}
     >
       {({ isActive }) => (
         <>
-          {isActive && (
-            <div className={clsx("absolute left-0  w-1.5 h-8 rounded-r-full transition-all duration-500 delay-700",
-              isActive ? 'bg-primary' : 'bg-transparent'
-            )} />
-          )}
+        <div className={clsx("absolute  w-1 h-6 rounded-r-full transition-all duration-500 bg-primary/80 shadow-[0px_0px_4px_2px] shadow-primary/10",
+          isActive ? 'left-0' : '-left-2'
+        )} />
 
-          <Icon 
-            weight="fill" 
-            className={clsx("size-6 min-w-6 ml-px drop-shadow-sm "
-            )}
-          />
+
+          <div className="min-w-14 flex justify-center w-fit items-center ">
+            <Icon 
+              weight="fill" 
+              className={clsx("size-6 min-w-6 drop-shadow-sm transition-all duration-200",
+                // isActive && "ml-1"
+              )}
+            />
+          </div>
+
 
           <span className="text-nowrap text-clip overflow-x-hidden w-full">{label}</span>
         </>

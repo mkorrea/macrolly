@@ -2,7 +2,7 @@ import { FeaturesCard } from "./features-card";
 
 import IngredientsIcon from "@/assets/ingredients-icon.svg";
 import MenuIcon from "@/assets/menu-icon.svg";
-import WeigthIcon from "@/assets/weigth-icon.svg";
+import ScaleIcon from "@/assets/scale-icon.svg";
 import TestImage from "@/assets/image 9.png";
 
 export function FeaturesSection() {
@@ -25,7 +25,7 @@ export function FeaturesSection() {
           image={TestImage}
         />
         <FeaturesCard 
-          icon={WeigthIcon}
+          icon={ScaleIcon}
           title="Consulta de calorias"
           description="Faça consultas rápidas de calorias usando os ingredientes cadastrados."
           image={TestImage}
