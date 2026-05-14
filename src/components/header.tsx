@@ -20,7 +20,7 @@ export function Header({
             "p-2 w-fit rounded-lg cursor-pointer opacity-70 hover:opacity-80 transition-all duration-400 md:absolute md:left-3",
             isSidebarOpen
               ? "  md:rotate-180 md: md:hover:-ml-0.5"
-              : " md:rotate-0 md:hover:ml-0.5",
+              : " md:rotate-0 md:hover:ml-0.5", 
           )}
           onClick={handleToggleSidebarMode}
         >

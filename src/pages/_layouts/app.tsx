@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import { Header } from "../../components/header";
 import { Sidebar } from "../../components/sidebar/sidebar";
 import { useState } from "react";
+import { Footer } from "@/components/footer";
 
 export function AppLayout() {
   const [ isSidebarOpen, setIsSidebarOpen ] = useState(false)
@@ -24,6 +25,7 @@ export function AppLayout() {
 
         <main>
           <Outlet />
+          <Footer />
         </main>
 
       </div>

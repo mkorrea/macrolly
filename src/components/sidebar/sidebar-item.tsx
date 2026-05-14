@@ -24,9 +24,8 @@ export function SidebarItem({
       classNames={{
         base: [
           // arrow color
-          "bg-white ",
         ],
-        content: ["py-2 px-4 shadow-xl rounded-lg ", "text-title bg-bg"],
+        content: ["py-2 px-4 shadow-xl rounded-lg ", "text-title bg-white"],
       }}
       isDisabled={isSidebarOpen}
     >

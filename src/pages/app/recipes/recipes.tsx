@@ -1,4 +1,5 @@
 import { PageHead } from "@/components/page-head";
+import { HeroRecipesSection } from "./hero-section";
 
 export function Recipes() {
   return (
@@ -6,7 +7,9 @@ export function Recipes() {
       <PageHead title="Receitas" />
       
     
-      <h1>Receitas</h1>
+      <div>
+        <HeroRecipesSection />
+      </div>
     </>
   )
 }

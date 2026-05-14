@@ -78,7 +78,7 @@ const ReviewCard = ({
   name: string
 }) => {
   return (
-    <figure className="shadow-card rounded-xl px-4 py-6 flex flex-col gap-y-4 w-full h-full max-w-full md:max-w-120 md:px-10">
+    <figure className="shadow-card bg-white rounded-xl px-4 py-6 flex flex-col gap-y-4 w-full h-full max-w-full md:max-w-120 md:px-10">
       <div className="flex gap-x-1">
         <StarIcon weight="fill" className="text-secondary" size={12} />
         <StarIcon weight="fill" className="text-secondary" size={12} />
@@ -127,7 +127,7 @@ export function Testimonials() {
             {reviews.map((review, index) => {
               return (
                 <CarouselItem key={index} className="max-w-fit w-full px-0">
-                  <div className="p-1 max-w-full h-full">
+                  <div className="p-1 max-w-full h-full ">
                     <ReviewCard name={review.name} body={review.body} />
                   </div>
                 </CarouselItem>
@@ -138,12 +138,12 @@ export function Testimonials() {
       </div>
 
       <div className="flex-col gap-y-4 hidden md:flex">
-        <Marquee pauseOnHover className="[--duration:60s] overflow-visible">
+        <Marquee pauseOnHover className="[--duration:60s] overflow-visible z-20">
           {firstRow.map((review, index) => (
             <ReviewCard key={index} {...review} />
           ))}
         </Marquee>
-        <Marquee reverse pauseOnHover className="[--duration:60s] overflow-visible">
+        <Marquee reverse pauseOnHover className="[--duration:60s] overflow-visible z-20">
           {secondRow.map((review, index) => (
             <ReviewCard key={index} {...review} />
           ))}
