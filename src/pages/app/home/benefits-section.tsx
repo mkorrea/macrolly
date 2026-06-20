@@ -3,10 +3,10 @@ import { CheckIcon } from "@phosphor-icons/react";
 
 export function BenefitsSection() {
   return (
-    <section className="relative px-2 w-full h-175 flex flex-col items-center z-0 lg:h-210" >
+    <section className="relative w-full h-175 flex flex-col items-center z-0 lg:h-210" >
       <img
         src={BenefitsBg}
-        className="min-w-screen h-full object-cover"
+        className="min-w-full h-full object-cover"
         />
 
         <div className="

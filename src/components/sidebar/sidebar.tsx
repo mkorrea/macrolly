@@ -15,7 +15,7 @@ export function Sidebar({ isSidebarOpen, handleToggleSidebarMode }: SidebarProps
   return (
     <div
       className={cn(
-        "absolute left-0 z-50 h-full flex flex-col gap-y-4 bg-bg py-2 px-1   overflow-y-auto no-scrollbar overflow-x-hidden   transition-all duration-500 ease   md:relative  md:min-w-16  ",
+        "absolute left-0 z-50 h-full flex flex-col gap-y-4 bg-bg py-2   overflow-y-auto no-scrollbar overflow-x-hidden   transition-all duration-500 ease   md:relative  md:min-w-16 md:px-1  ",
         isSidebarOpen
           ? "w-screen  md:w-68 "
           : "w-0         md:w-16",

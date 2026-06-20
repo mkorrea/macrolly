@@ -104,7 +104,7 @@ export function Testimonials() {
   )
   
   return (
-    <section className="py-12 space-y-10 w-full">
+    <section className="py-12 space-y-10 w-full overflow-x-hidden">
       <div className="flex flex-col items-center gap-y-3 px-2">
         <h1 className="text-subtitle font-semibold text-center text-2xl md:text-3xl xl:text-4xl">
           Feito para você. Testado e aprovado 
