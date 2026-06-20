@@ -1,31 +1,24 @@
 import clsx from "clsx";
-import { useState, type ComponentProps } from "react";
+import { useState, type ComponentProps, type ComponentType } from "react";
 
 interface ButtonProps extends ComponentProps<"button"> {
+  icon?: ComponentType<{ className?: string }>
+  iconClassName?: string;
+  isIconOnly?: boolean
+
   animate?: boolean;
-  size?: "sm" | "md" | "lg" | "responsive";
-  icon?: React.ElementType;
-  children: string;
+  size?: "sm" | "md" | "lg";
+  children?: React.ReactNode;
   className?: string;
-  variant?: "primary" | "secondary";
-}
-
-const sizeStyles = {
-  sm:  "px-4 h-8 gap-x-1 text-sm",
-  md:  "px-6 h-10 gap-x-2 text-sm",
-  lg:  "px-8 h-12 gap-x-2 rounded-xl text-base",
-
-  responsive: `
-    px-4 h-8 gap-x-1 text-sm
-    md:px-6 md:h-10 md:gap-x-2 md:text-sm
-    lg:px-8 lg:h-12 lg:gap-x-2 lg:rounded-xl lg:text-base
-  `,
+  variant?: "primary" | "secondary" | "outline" | "ghost";
 }
 
 export function Button({
+  icon: Icon,
+  iconClassName,
+  isIconOnly = false,
   animate,
   size = "md",
-  icon: Icon,
   className,
   children,
   variant = "primary",
@@ -43,27 +36,46 @@ export function Button({
     }
   }
 
+  const sizeStyles = {
+    sm: clsx("h-8 px-4 gap-1", Icon && !isIconOnly && "pl-3"),
+    md: clsx("h-9 px-5 gap-1.5", Icon && !isIconOnly && "pl-3.5"),
+    lg: clsx("h-10 px-6 gap-1.5", Icon && !isIconOnly && "pl-4.5"),
+  };
+  const iconSizes = {
+    sm: "size-4",
+    md: "size-4",
+    lg: "size-5",
+  };
+
+  const variants = {
+    primary:
+      " bg-brand text-white  shadow-button shadow-brand/20 hover:bg-brand-hover hover:shadow-brand-hover/20  disabled:bg-brand-disabled  ",
+    secondary:
+      "bg-surface-soft border border-border  text-text hover:bg-surface hover:shadow-button hover:shadow-black/5  disabled:bg-surface-soft disabled:opacity-60 ",
+    outline:
+      " bg-transparent border border-border text-brand hover:bg-brand-soft hover:border-brand disabled:bg-transparent disabled:border-border disabled:opacity-60  ",
+    ghost:
+      " text-text hover:bg-surface-soft hover:shadow-button hover:shadow-black/5  disabled:text-muted disabled:bg-transparent disabled:shadow-none ",
+  };
+
   return (
     <button
       {...props}
       onMouseUp={showMouseReleaseClickBounceAnimation}
       className={clsx(
-        "inline-flex justify-center items-center text-white rounded-md cursor-pointer text-shadow-sm hover:brightness-105 active:scale-95 transition-all",
+        "inline-flex justify-center items-center text-sm font-medium rounded-xl cursor-pointer active:scale-98 transition-all duration-150  disabled:opacity-70  disabled:cursor-not-allowed disabled:active:scale-100",
         sizeStyles[size],
-        variant === "primary" && "bg-linear-to-br from-secondary to-primary",
-        variant === "secondary" && "bg-accent",
+        variants[variant],
         isAnimating && "animate-click",
         className,
       )}
     >
       {Icon && (
-        <Icon
-          weight="fill"
+        <Icon 
           className={clsx(
-            "drop-shadow-sm",
-            size === "sm" && "w-4 h-4 -ml-1 ",
-            size === "md" && "w-5 h-5 -ml-1 ",
-            size === "lg" && "w-6 h-6 -ml-2 ",
+            iconSizes[size],
+            variant === "ghost" && "text-brand",
+            iconClassName
           )}
         />
       )}

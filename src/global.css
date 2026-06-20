@@ -18,23 +18,62 @@
 
 @theme {
   --color-*: initial;
-
-  --color-primary: #f86060;
-  --color-accent: #fc8468;
-  --color-secondary: #ffa770;
-
+  
   --color-white: #ffffff;
   --color-black: #000000;
 
-  --color-title: #272221;
-  --color-subtitle: #403937;
-  --color-text: #574f4d;
-  --color-description: #8c8c8c;
-  --color-navbar-menu: #b0b0b0;
+  /* brand */
+  --color-brand: #FA6644;
+  --color-brand-hover: #ff5a36;
+  --color-brand-soft: #fff1ec;
+  --color-brand-light: #FFA770;
+  --color-brand-disabled: #F6B6A7;
+
+  /* gradients */
+  --gradient-brand: linear-gradient(to bottom right, var(--color-brand-light), var(--color-brand));
+
+  /* background */
+  --color-bg: #FCFBFA;
+  --color-surface: #ffffff;
+  --color-surface-soft: #F9F6F5;
+
+  /* text */
+  --color-text: #3d3432;
+  --color-text-soft: #7e7471;
+  --color-text-muted: #b4aba7;
+
+
+  /* borders */
+  --color-border: #DAD8D6;
+
+
+  /* shadows */
+  --shadow-button: 0px 2px 6px;
+  --shadow-input: 0px 2px 6px;
+  --shadow-card: 0px 6px 16px;
+
+
+  /* font */
+  --font-logo: "Bricolage Grotesque", sans-serif;
+  --font-default: "DM Sans", "Inter", "sans-serif";
+
+
+  --color-danger: #E44C3F;
+
+
+  --color-fiber: #56A134;
+
+
+
+
+
+
+  --color-primary: #f86060;
+  --color-accent: #F26D42;
+  --color-secondary: #ffa770;
 
   --color-bg: #fffdfa;
 
-  --color-danger: #ec6b6a;
 
   --animate-click: release-button-click-bounce 400ms ease;
 
@@ -43,8 +82,6 @@
   --drop-shadow-logo: 0px 0px 2px rgba(0, 0, 0, 0.2);
   --color-shadow-smooth: #b0b0b01a;
 
-  --font-logo: "Bricolage Grotesque", sans-serif;
-  --font-default: "DM Sans", "Inter", "sans-serif";
 
   --breakpoint-3xl: 120rem;
 

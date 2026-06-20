@@ -12,7 +12,7 @@ export function CTASection() {
         </p>
       </div>
 
-      <Button animate>
+      <Button animate size="lg">
         Comece Agora
       </Button>
       

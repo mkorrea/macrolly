@@ -1,4 +1,4 @@
-import { BreadIcon, CookingPotIcon, HouseSimpleIcon, UserIcon } from "@phosphor-icons/react";
+import { BreadIcon, CookingPotIcon, HouseSimpleIcon } from "@phosphor-icons/react";
 
 export const sidebarItems = {
   general: [
@@ -17,11 +17,11 @@ export const sidebarItems = {
       path: "/ingredients",
       icon: BreadIcon
     },
-    {
-      label: "Meu Perfil",
-      path: "/profile",
-      icon: UserIcon
-    },
+    // {
+    //   label: "Meu Perfil",
+    //   path: "/profile",
+    //   icon: UserIcon
+    // },
   ],
   // account: [
   //   {
