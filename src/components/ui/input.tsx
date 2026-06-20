@@ -99,7 +99,7 @@ export const Input = forwardRef<HTMLInputElement, InputProps>(
             errorMessage
               ? "border-brand"
               : isFocused
-              ? "border-brand shadow-button shadow-brand/20"
+              ? "border-brand shadow-input shadow-brand/20"
               : "border-border",
 
             "bg-surface",

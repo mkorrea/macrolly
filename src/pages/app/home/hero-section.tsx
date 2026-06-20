@@ -35,7 +35,7 @@ export function HeroSection() {
         </div>
 
         <div className="space-y-4">
-          <Button size="responsive" animate>
+          <Button size="lg" animate>
             Comece Agora
           </Button>
 

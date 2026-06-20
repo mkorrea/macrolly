@@ -49,6 +49,8 @@
 
   /* shadows */
   --shadow-button: 0px 2px 6px;
+  --shadow-input: 0px 2px 6px;
+  --shadow-card: 0px 6px 16px;
 
 
   /* font */
@@ -56,9 +58,10 @@
   --font-default: "DM Sans", "Inter", "sans-serif";
 
 
+  --color-danger: #E44C3F;
 
 
-
+  --color-fiber: #56A134;
 
 
 
@@ -69,17 +72,8 @@
   --color-accent: #F26D42;
   --color-secondary: #ffa770;
 
-
-
-  --color-title: #272221;
-  --color-subtitle: #403937;
-  --color-text: #574f4d;
-  --color-description: #8c8c8c;
-  --color-navbar-menu: #b0b0b0;
-
   --color-bg: #fffdfa;
 
-  --color-danger: #E44C3F;
 
   --animate-click: release-button-click-bounce 400ms ease;
 

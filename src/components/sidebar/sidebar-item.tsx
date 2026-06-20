@@ -36,7 +36,7 @@ export function SidebarItem({
             "relative rounded-lg flex items-center py-3 gap-x-2 font-semibold  overflow-hidden transition-all duration-200",
             isActive
               ? "bg-white shadow-navbar-menu text-accent hover:brightness-105"
-              : "text-navbar-menu hover:text-text active:scale-97",
+              : "text-text-muted hover:text-text active:scale-97",
           )
         }
       >
@@ -44,7 +44,7 @@ export function SidebarItem({
           <>
             <div
               className={clsx(
-                "absolute  w-1 h-6 rounded-r-full transition-all duration-400  ease bg-primary/80 shadow-[0px_0px_4px_2px] shadow-primary/10",
+                "absolute  w-1 h-6 rounded-r-full transition-all duration-400  ease bg-brand/80 shadow-[0px_0px_4px_2px] shadow-primary/10",
                 isActive ? "left-0" : "-left-2",
               )}
             />

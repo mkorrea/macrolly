@@ -3,6 +3,9 @@ import { Button } from "@/components/ui/button"
 import { Drawer, DrawerClose, DrawerContent, DrawerFooter, DrawerHeader, DrawerTrigger } from "@/components/ui/drawer"
 import { Input } from "@/components/ui/input"
 import { DnaIcon, FadersHorizontalIcon, FireIcon, LeafIcon, MagnifyingGlassIcon, PlusIcon, StarIcon } from "@phosphor-icons/react"
+import { RecipeCard } from "./recipe-card"
+
+import PaoDeQueijo from "@/assets/pao-de-queijo.jpg"
 
 export function HeroRecipesSection() {
   return (
@@ -100,7 +103,19 @@ export function HeroRecipesSection() {
       </section>
 
 
-      
+      <section className="px-3 space-y-4">
+        <div className="flex justify-between items-center">
+          <h2 className="text-text text-xl font-semibold">Minhas receitas</h2>
+          <span className="text-brand text-sm font-semibold cursor-pointer">Ver todas</span>
+        </div>
+
+        <div className="space-y-3 md:flex flex-wrap gap-4">
+          <RecipeCard imgSrc={PaoDeQueijo} title="Pão de Queijo de frigideira" calories={235} proteins={14} fiber={4} />
+          <RecipeCard imgSrc={PaoDeQueijo} title="Pão de Queijo de frigideira Pão de Queijo de frigideira Pão de Queijo Pão de Queijo" calories={235} proteins={14} fiber={4} />
+          <RecipeCard imgSrc={PaoDeQueijo} title="Pão de Queijo de frigideira" calories={235} proteins={14} fiber={4} />
+          <RecipeCard imgSrc={PaoDeQueijo} title="Pão de Queijo de frigideira" calories={235} proteins={14} fiber={4} />
+        </div>
+      </section>
 
 
 
